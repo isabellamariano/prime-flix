@@ -13,12 +13,7 @@ function Filme() {
   useEffect(() => {
     async function loadFilme() {
       await api
-        .get(`/movie/${id}`, {
-          params: {
-            api_key: "2d42c9208914f51fc7387e9971ac476a",
-            language: "pt-BR",
-          },
-        })
+        .get(`/movie/${id}`, {})
         .then((r) => {
           setFilme(r.data);
           setLoading(false);
